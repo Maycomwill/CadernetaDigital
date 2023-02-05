@@ -48,14 +48,14 @@ export function Turma() {
                   Voltar
                 </Button>
                 <Button
-                  className="w-[30%]"
+                  className="w-[30%] h-14 md:h-full"
                   size="sm"
                   onClick={() => navigate("cadastro-de-aluno")}
                 >
                   Cadastrar aluno
                 </Button>
                 <Button
-                  className="w-[30%]"
+                  className="w-[30%] h-14 md:h-full"
                   version="SECONDARY"
                   size="sm"
                   onClick={() => handleDeleteClassFromDB(params.turmaid)}
