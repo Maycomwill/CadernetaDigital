@@ -80,17 +80,12 @@ module.exports = {
 
     },
     extend: {
-
-      screens: {
-        'phone': '300px'
-      },
-
       rotate: {
         '360': '360deg',
       },
 
       gridTemplateColumns: {
-        'layout': 'repeat(3, minmax(320px,1fr))'
+        'layout': 'repeat(2, minmax(480px,1fr)) md:repeat(3, minmax(320px,1fr))'
       },
       animation: {
         'spin-slow': 'spin 2s ease-in-out infinite'

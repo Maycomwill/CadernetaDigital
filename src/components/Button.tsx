@@ -25,7 +25,7 @@ export function Button({
   return (
     <Comp
       className={clsx(
-        "bg-green-500 rounded font-semibold text-gray-900 w-full text-md transition-colors outline-none focus:ring-2 ring-gray-100 hover:bg-green-300 flex items-center justify-center",
+        "bg-green-500 rounded font-semibold text-gray-900 w-full transition-colors outline-none focus:ring-2 ring-gray-100 hover:bg-green-300 flex items-center justify-center",
         {
           "py px-1": size === "xsm",
           "py-1 px-2": size === "sm",
@@ -33,10 +33,10 @@ export function Button({
           "py-4 px-6": size === "lg",
         },
         {
-          "text-xsm": textSize === "xsm",
-          "text-sm": textSize === "sm",
-          "text-md": textSize === "md",
-          "text-lg": textSize === "lg",
+          "text-xxs md:text-xsm": textSize === "xsm",
+          "text-xsm md:text-sm": textSize === "sm",
+          "text-sm md:text-md": textSize === "md",
+          "text-md md:text-lg": textSize === "lg",
         },
         {
           "bg-red-500": version === "SECONDARY",

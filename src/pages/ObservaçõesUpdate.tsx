@@ -14,17 +14,17 @@ function ObservaçõesUpdate() {
   async function handleNoteUpdate(e: FormEvent) {
     e.preventDefault()
     const updatingNote = await handleUpdateNotesFromStudent(`${params.alunoid}`, `${noteUpdated}`)
-    
+
   }
 
   return (
     <>
       <div className="w-full">
         <form action="updateNotes" className="w-full flex flex-col gap-4 p-4" onSubmit={handleNoteUpdate}>
-          <div className="w-[80%] m-auto">
+          <div className="w-full md:w-[80%] h-full m-auto">
             <TextInput.Root>
               <TextInput.Icon>
-                <NotePencil />
+                <NotePencil weight="duotone"/>
               </TextInput.Icon>
               <TextInput.Input
                 placeholder="Digite suas anotações sobre esse aluno(a)"
@@ -33,7 +33,7 @@ function ObservaçõesUpdate() {
               ></TextInput.Input>
             </TextInput.Root>
           </div>
-          <div className="w-[10%] m-auto">
+          <div className="md:w-[10%] m-auto">
             <Button
               type="submit"
               size="sm"

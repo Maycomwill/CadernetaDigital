@@ -73,13 +73,13 @@ export function TabelaDeAlunos() {
                           {birthDay}
                         </td>
                         <td className="px-4 py-1 border border-gray-100 text-xsm">
-                          <div className="w-[50%] m-auto">
+                          <div className="w-[75%] m-auto">
                             <Button
                               onClick={() => navigate(`${aluno.studentId}`)}
                               size="sm"
                             >
                               <Icon>
-                                <UserCircle />
+                                <UserCircle weight="duotone" />
                               </Icon>
                             </Button>
                           </div>

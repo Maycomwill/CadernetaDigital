@@ -54,15 +54,17 @@ export function Escola() {
                 <div
                   className="
                   w-[100%]
-                  mx-4
+                  mr-2
+                  md:mx-4
                   grid
                   pb-8
-                  gap-4 
-                  grid-flow-col 
+                  gap-2
+                  md:gap-4
+                  grid-flow-col
                   grid-cols-layout
-                  auto-cols-max 
-                  overflow-auto  
-                  snap-mandatory 
+                  auto-cols-max
+                  overflow-auto
+                  snap-mandatory
                   scrollbar
                   scrollbar-thumb-gray-700
                   scrollbar-track-gray-800
@@ -75,7 +77,7 @@ export function Escola() {
                       <div key={turma.classId}>
                         <TurmaCard.Root>
                           <TurmaCard.Icon>
-                            <Books />
+                            <Books weight="duotone" />
                           </TurmaCard.Icon>
                           <TurmaCard.Content
                             nome={turma.className}
@@ -89,19 +91,19 @@ export function Escola() {
                 </div>
               )}
             </div>
-            <div className="pt-4 w-full flex items-center justify-center gap-4">
-              <div>
+            <div className="pt-4 w-full flex md:flex-row flex-col items-center justify-center gap-4">
+              <div className="w-[50%] md:w-[20%]">
                 <Button size="sm" onClick={() => navigate("/")}>
                   Voltar
                 </Button>
               </div>
 
-              <div>
+              <div className="w-[50%] md:w-[20%]">
                 <Button size="sm" onClick={() => navigate("cadastro-de-turma")}>
                   Cadastrar turma
                 </Button>
               </div>
-              <div>
+              <div className="w-[50%] md:w-[20%]">
                 <Button
                   version="SECONDARY"
                   size="sm"

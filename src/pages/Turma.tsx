@@ -38,30 +38,30 @@ export function Turma() {
             <div id="alunos-data" className="w-full">
               <TabelaDeAlunos />
             </div>
-            <div className="w-full flex items-center justify-center">
-              <div className="flex gap-4">
-                <div>
-                  <Button size="sm" onClick={() => navigate(-1)}>
-                    Voltar
-                  </Button>
-                </div>
-                <div>
-                  <Button
-                    size="sm"
-                    onClick={() => navigate("cadastro-de-aluno")}
-                  >
-                    Cadastrar aluno
-                  </Button>
-                </div>
-                <div>
-                  <Button
-                    version="SECONDARY"
-                    size="sm"
-                    onClick={() => handleDeleteClassFromDB(params.turmaid)}
-                  >
-                    Excluir turma
-                  </Button>
-                </div>
+            <div className="w-full flex items-center justify-center mb-12 md:mb-0">
+              <div className="w-full flex flex-row items-center justify-center gap-4">
+                <Button
+                  className="w-[30%] h-14 md:h-full"
+                  size="sm"
+                  onClick={() => navigate(-1)}
+                >
+                  Voltar
+                </Button>
+                <Button
+                  className="w-[30%]"
+                  size="sm"
+                  onClick={() => navigate("cadastro-de-aluno")}
+                >
+                  Cadastrar aluno
+                </Button>
+                <Button
+                  className="w-[30%]"
+                  version="SECONDARY"
+                  size="sm"
+                  onClick={() => handleDeleteClassFromDB(params.turmaid)}
+                >
+                  Excluir turma
+                </Button>
               </div>
             </div>
           </div>

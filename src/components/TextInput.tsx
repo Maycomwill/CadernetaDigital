@@ -8,7 +8,7 @@ export interface TextInputRootProps {
 
 function TextInputRoot(props: TextInputRootProps) {
   return (
-    <div className='py-4 px-3 h-12 flex items-center gap-3 rounded bg-gray-800 outline-none focus-within:ring-2 ring-green-500 w-full' 
+    <div className='py-4 px-3 h-full flex items-center gap-3 rounded bg-gray-800 outline-none focus-within:ring-2 ring-green-500 w-full'
       {...props}
     >
       {props.children}
@@ -37,7 +37,7 @@ export interface TextInputInputProps extends InputHTMLAttributes<HTMLInputElemen
 function TextInputInput(props: TextInputInputProps) {
   return (
     <input
-      className='bg-transparent flex-1 text-xsm text-green-200 placeholder:text-gray-400 outline-none'
+      className='bg-transparent h-full break-words flex-1 text-xsm text-green-200 placeholder:text-gray-400 outline-none'
       {...props}
     />
   )

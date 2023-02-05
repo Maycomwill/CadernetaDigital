@@ -36,12 +36,12 @@ export function Text({
           "font-black": weight === "black",
         },
         {
-          "text-xxs" : size === "xxs",
-          "text-xsm": size === "xsm",
-          "text-sm": size === "sm",
-          "text-md": size === "md",
-          "text-lg": size === "lg",
-          "text-xlg": size === "xlg",
+          "text-[8px] md:text-xxs" : size === "xxs",
+          "text-xxs md:text-xsm": size === "xsm",
+          "text-xsm md:text-sm": size === "sm",
+          "text-sm md:text-md": size === "md",
+          "text-md md:text-lg": size === "lg",
+          "text-lg md:text-xlg": size === "xlg",
         },
         className
       )}

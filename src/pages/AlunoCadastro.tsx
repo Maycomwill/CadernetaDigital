@@ -80,7 +80,7 @@ export function AlunoCadastro(): AlunoCadastroProps {
         </header>
         <form
           onSubmit={handleStudentRegister}
-          className="flex flex-col gap-4 mt-4 w-full max-w-sm"
+          className="flex flex-col gap-4 mt-4 px-4 md:px-0 w-full max-w-sm"
         >
           <label htmlFor="student-name" className="flex flex-col gap-3">
             <Text className="text-sm font-semibold">Nome do(a) aluno(a) </Text>

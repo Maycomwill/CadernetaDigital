@@ -20,19 +20,15 @@ export function Header() {
 
   if (userData?.photoURL === auth.currentUser?.photoURL) {
     return (
-      <div className="flex w-full items-center justify-between gap-4 p-4 border-b-2 border-green-500">
-        <Heading>
+      <div className="flex w-full items-center justify-between gap-4 p-2 md:p-4 border-b-2 border-green-500">
+        <Heading size="lg">
           <div className=" hover:text-green-500 hover:translate-x-2 transition-all duration-100">
-          <a
-            href="/"
-          >
-            Caderneta Digital
-          </a>
+            <a href="/">Caderneta Digital</a>
           </div>
         </Heading>
         <div className="flex w-[30%] gap-6 items-center justify-end">
           <div className="flex items-center justify-center gap-2">
-            <Text size="md" >{userData?.name}</Text>
+            {/* <Text className="text-xsm ">{userData?.name}</Text> */}
             {userData?.photoURL !== null ? (
               <div className="shadow-md shadow-black rounded-full">
                 <img

@@ -68,35 +68,37 @@ export function AlunoDetails() {
           <div className="flex flex-col justify-center p-4 gap-2">
             <div className="border-b-2 pb-2 border-green-500">
               <div className="w-full flex items-center justify-between">
-                <Text size="lg">Nome: {studentInfo?.studentName}</Text>
+                <Text size="lg">Nome: <span className="font-bold">{studentInfo?.studentName}</span></Text>
               </div>
             </div>
-            <div className="w-full flex gap-4">
-              <div className="w-[50%]">
-                <div className="flex gap-1">
+            <div className="w-full flex flex-col md:flex-row gap-8 md:gap-4">
+              <div className="w-full md:w-[50%] flex flex-col gap-4">
+                <div className="flex flex-col gap-1">
                   <Text>Escola:</Text>
-                  <Text>{schoolInfo?.schoolName}</Text>
+                  <Text weight="bold">{schoolInfo?.schoolName}</Text>
                 </div>
-                <div className="flex gap-1">
+                <div className="flex flex-col gap-1">
                   <Text>Turma:</Text>
-                  <Text className="capitalize">{classInfo?.className}</Text>
+                  <Text weight="bold" className="capitalize">
+                    {classInfo?.className}
+                  </Text>
                 </div>
-                <div className="flex gap-1">
+                <div className="flex flex-col gap-1">
                   <Text>Aniversário:</Text>
-                  <Text>{birthDay}</Text>
+                  <Text weight="bold">{birthDay}</Text>
                 </div>
               </div>
-              <div className="w-[50%]">
+              <div className="w-full md:w-[50%]">
                 <div className="flex flex-col w-full gap-4">
                   <div className="flex flex-col gap-1">
                     <Text>Observações:</Text>
                     <div className="bg-gray-800 rounded">
-                      <p className="break-words indent-4 py-2 text-gray-100">
+                      <p className="break-words indent-2 md:indent-4 py-2 px-2 text-justify text-gray-100">
                         {studentsNotes}
                       </p>
                     </div>
                   </div>
-                  <div className="w-[15%] m-auto">
+                  <div className="md:w-[15%] m-auto">
                     <Button size="sm" onClick={() => navigate("update")}>
                       Editar
                     </Button>
@@ -106,7 +108,7 @@ export function AlunoDetails() {
             </div>
             <div className="w-full flex flex-col gap-4 items-center justify-center">
               <Outlet />
-              <div className="w-[20%] flex gap-2 justify-center">
+              <div className="md:w-[20%] py-4 flex gap-2 items-center justify-center">
                 <div>
                   <Button
                     size="sm"
@@ -117,7 +119,7 @@ export function AlunoDetails() {
                     Voltar
                   </Button>
                 </div>
-                <div>
+                <div className="w-full">
                   <Button
                     version="SECONDARY"
                     size="sm"

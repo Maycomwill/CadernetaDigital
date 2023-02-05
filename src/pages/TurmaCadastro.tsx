@@ -39,7 +39,7 @@ export function TurmaCadastro(): TurmaCadastroProps {
       className,
       createdAt: serverTimestamp(),
       schoolId,
-      userId
+      userId,
     });
     setClassId(classRegister.id);
   }
@@ -78,13 +78,13 @@ export function TurmaCadastro(): TurmaCadastroProps {
         </header>
         <form
           onSubmit={handleClassRegister}
-          className="w-full flex flex-col gap-4 mt-4 max-w-sm"
+          className="w-full flex flex-col gap-4 mt-4 px-4 md:px-0 max-w-sm"
         >
           <label htmlFor="student-name" className="flex flex-col gap-3">
             <Text className="text-sm font-semibold">Nome da turma</Text>
             <TextInput.Root>
               <TextInput.Icon>
-                <BookBookmark />
+                <BookBookmark weight="duotone" />
               </TextInput.Icon>
               <TextInput.Input
                 required
@@ -98,6 +98,7 @@ export function TurmaCadastro(): TurmaCadastroProps {
             </TextInput.Root>
           </label>
           <Button type="submit">Cadastrar turma </Button>
+          <Button onClick={()=>navigate(-1)} type="submit">Voltar</Button>
         </form>
       </div>
     </>

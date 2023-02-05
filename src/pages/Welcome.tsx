@@ -17,19 +17,19 @@ export function Welcome() {
     );
   } else {
     return (
-      <div className="pt-16">
-        <div className="flex w-full h-full items-center justify-between bg-gray-900">
-          <div className="w-[50%] flex items-center justify-center">
-            <SVGHome width={450} height={450} />
+      <div className="md:pt-16">
+        <div className="flex flex-col md:flex-row w-full h-full items-center justify-between bg-gray-900">
+          <div className="h-[20%] w-full md:w-[50%] flex items-center justify-center">
+            <SVGHome width={450} height={450}/>
           </div>
           <div
             id="right-side"
-            className="w-[50%] flex flex-col items-center justify-center px-4 py-4"
+            className="w-[50%] flex flex-col items-center justify-center md:px-4"
           >
             <LogIn />
           </div>
         </div>
-        <div className="p-4 w-full">
+        <div className="md:p-4 pt-12 w-screen ">
           <MainFooter />
         </div>
       </div>

@@ -50,14 +50,14 @@ export function LogIn() {
 
   return (
     <div className="w-full h-full text-gray-100 flex flex-col items-center justify-center bg-gray-900">
-      <header className="flex items-center flex-col w-full">
+      <header className="flex items-center flex-col w-screen md:w-full">
         <Heading size="xlg">
           Bem vindo a <span className="text-green-500">Caderneta Digital</span>
         </Heading>
       </header>
-      <section className="mt-4 w-full flex justify-center items-center">
-        <div className="flex flex-col items-center justify-center gap-4 px-4">
-          <div className="w-[80%] flex flex-col gap-4 items-start text-justify">
+      <section className="mt-2 md:mt-4 w-screen px-4 md:w-full flex justify-center items-center">
+        <div className="flex flex-col items-center justify-center gap-4 md:px-4">
+          <div className="w-full flex flex-col gap-4 items-start text-justify">
             <Text>
               Aqui você tem a simplicidade de organizar as informações sobre
               suas turmas, alunos, notas e frequências.
@@ -73,7 +73,7 @@ export function LogIn() {
             </Text>
           </div>
 
-          <div className="w-[50%] pt-8">
+          <div className="w-full px-4 md:w-[50%] md:pt-8 pb-8">
             <Button
               version="PRIMARY"
               onClick={signInWithGoogle}

@@ -45,23 +45,23 @@ function EscolaCadastro(): EscolaCadastroProps {
       CEPAddres: schoolCEP,
       createdAt: serverTimestamp(),
     });
-      setSchoolId(schoolRegister.id)
+    setSchoolId(schoolRegister.id);
+  }
+  useEffect(() => {
+    if (schoolId !== null) {
+      addingSchoolIdToTheDocumentCreated();
     }
-    useEffect(() => {
-      if(schoolId !== null){
-        addingSchoolIdToTheDocumentCreated() 
-      }
-    }, [schoolId])
+  }, [schoolId]);
 
-    async function addingSchoolIdToTheDocumentCreated() {
-      const docRef = doc(db, "schools", `${schoolId}`)
-      const addingSchoolIdToDBDocument = await updateDoc(docRef, {
-        schoolId: `${schoolId}`
-      });
-      setLoading(false)
-      alert("Escola cadastrada com sucesso!")
-      handleWithSchoolDataFromDb(auth.currentUser?.uid);
-      navigate('/')
+  async function addingSchoolIdToTheDocumentCreated() {
+    const docRef = doc(db, "schools", `${schoolId}`);
+    const addingSchoolIdToDBDocument = await updateDoc(docRef, {
+      schoolId: `${schoolId}`,
+    });
+    setLoading(false);
+    alert("Escola cadastrada com sucesso!");
+    handleWithSchoolDataFromDb(auth.currentUser?.uid);
+    navigate("/");
   }
 
   if (loading) {
@@ -69,7 +69,16 @@ function EscolaCadastro(): EscolaCadastroProps {
   }
 
   return (
-    <div className="w-screen flex flex-col items-center justify-center mt-4">
+    <div
+      className="w-full
+      flex
+      flex-col
+      items-center
+      justify-center
+      mt-4
+      mb-12
+      "
+    >
       <header className="text-center">
         <Heading size="lg" className="text-gray-100">
           Preencha os campos e cadastre uma escola
@@ -77,13 +86,13 @@ function EscolaCadastro(): EscolaCadastroProps {
       </header>
       <form
         onSubmit={handleSchoolRegister}
-        className="flex flex-col gap-4 mt-4 w-full max-w-sm"
+        className="flex flex-col gap-4 mt-4 w-full items-center"
       >
-        <label htmlFor="school-name" className="flex flex-col gap-3">
+        <label htmlFor="school-name" className="flex flex-col gap-3 w-full md:w-[80%]">
           <Text className="text-sm font-semibold">Nome da escola</Text>
           <TextInput.Root>
             <TextInput.Icon>
-              <BookBookmark />
+              <BookBookmark weight="duotone" />
             </TextInput.Icon>
             <TextInput.Input
               required
@@ -95,11 +104,11 @@ function EscolaCadastro(): EscolaCadastroProps {
             />
           </TextInput.Root>
         </label>
-        <label htmlFor="address" className="flex flex-col gap-3">
+        <label htmlFor="address" className="flex flex-col gap-3 w-full md:w-[80%]">
           <Text className="text-sm font-semibold">Endereço</Text>
           <TextInput.Root>
             <TextInput.Icon>
-              <Buildings />
+              <Buildings weight="duotone" />
             </TextInput.Icon>
             <TextInput.Input
               required
@@ -111,11 +120,11 @@ function EscolaCadastro(): EscolaCadastroProps {
             />
           </TextInput.Root>
         </label>
-        <label htmlFor="school-number" className="flex flex-col gap-3">
+        <label htmlFor="school-number" className="flex flex-col gap-3 w-full md:w-[80%]">
           <Text className="text-sm font-semibold">Nº</Text>
           <TextInput.Root>
             <TextInput.Icon>
-              <Hash />
+              <Hash weight="duotone" />
             </TextInput.Icon>
             <TextInput.Input
               onChange={(e) => setSchoolNumber(e.target.value)}
@@ -126,11 +135,11 @@ function EscolaCadastro(): EscolaCadastroProps {
             />
           </TextInput.Root>
         </label>
-        <label htmlFor="CEP-Number" className="flex flex-col gap-3">
+        <label htmlFor="CEP-Number" className="flex flex-col gap-3 w-full md:w-[80%]">
           <Text className="text-sm font-semibold">CEP</Text>
           <TextInput.Root>
             <TextInput.Icon>
-              <MapPin />
+              <MapPin weight="duotone" />
             </TextInput.Icon>
             <TextInput.Input
               onChange={(e) => setSchoolCEP(e.target.value)}
@@ -141,7 +150,7 @@ function EscolaCadastro(): EscolaCadastroProps {
             />
           </TextInput.Root>
         </label>
-        <Button type="submit">Cadastrar escola</Button>
+        <Button className="w-full md:w-[80%]" type="submit">Cadastrar escola</Button>
       </form>
     </div>
   );
