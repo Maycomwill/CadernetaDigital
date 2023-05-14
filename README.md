@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://caderneta-digital.vercel.app/">🔗 Live Preview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://cadernetadigital.vercel.app/">🔗 Live Preview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">🖥️ Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias">🚀 Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">📝 License</a>
@@ -30,14 +30,14 @@ Uma plataforma para cadastro de escolas, turmas e alunos para que um professor t
 
 ## Preview pics
 
-<p>Aqui está algumas imagens do projeto, porém, você também pode testar na <a href="https://caderneta-digital.vercel.app/" target="_blank">Live preview</a></p>
+<p>Aqui está algumas imagens do projeto, porém, você também pode testar na <a href="https://cadernetadigital.vercel.app/" target="_blank">Live preview</a></p>
 
  <div align="center">
- <img src="https://github.com/Maycomwill/Ignite-Lab/blob/master/public/Prints/1.jpg?raw=true" width: 700px/>
+ <img src="https://github.com/Maycomwill/CadernetaDigital/blob/master/public/Prints/1.jpg?raw=true" width: 700px/>
  </div>
 
  <div align="center">
- <img src="https://github.com/Maycomwill/Ignite-Lab/blob/master/public/Prints/2.jpg?raw=true" width: 700px/>
+ <img src="https://github.com/Maycomwill/CadernetaDigital/blob/master/public/Prints/2.jpg?raw=true" width: 700px/>
  </div>
 
 ## 📝 License
